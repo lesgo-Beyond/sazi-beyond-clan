@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/SBFAV.png">
+    <title>SAZI Beyond Clan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+        * {
+            font-family: "Orbitron", serif;
+            font-optical-sizing: auto;
+            /* font-weight: <weight>; */
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+
+        header {
+            background-color: #1f6feb;
+            background-image: url(img/sl.jpg);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 5px solid #58a6ff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #21262d;
+            padding: 10px 20px;
+            border-bottom: 2px solid #30363d;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            color: #58a6ff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .menu-toggle {
+            display: none;
+            background-color: #1f6feb;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .menu-toggle:hover {
+            background-color: #58a6ff;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #21262d;
+                position: absolute;
+                top: 245px;
+                right: 55px;
+                width: 200px;
+                border: 2px solid #30363d;
+                border-radius: 8px;
+                padding: 10px;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+        @media screen and (max-width: 550px){
+            form{
+                width: 300px;
+            }
+        }
+
+        main {
+            padding: 40px 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #161b22;
+            border: 2px solid #30363d;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #1f6feb;
+            padding: 10px;
+            border-top: 5px solid #58a6ff;
+        }
+
+        h2 {
+            color: #58a6ff;
+            text-transform: uppercase;
+        }
+
+        .contact-info a {
+            color: #3fb950;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 500px;
+        }
+
+        input,
+        textarea,
+        button {
+            padding: 10px;
+            border: 2px solid #30363d;
+            border-radius: 5px;
+            background-color: #0d1117;
+            color: #c9d1d9;
+        }
+        textarea{
+            height: 150px;
+        }
+
+        button {
+            background-color: #1f6feb;
+            border: none;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #58a6ff;
+        }
+
+        #sazi {
+            display: inline-block;
+            background: linear-gradient(45deg,
+                    rgba(0, 60, 255, 1) 49%,
+                    rgba(32, 178, 7, 1) 100%);
+            background-blend-mode: normal;
+        }
+        #slTop{
+            padding: 5px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-image: url(img/slTop.jpg);
+        }
+        #slTop img{
+            width: 300px;
+        }
+        .contactForm{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .join , .rules, .info{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .join img,.rules img, .info img{
+            width: 300px;
+            margin: 20px 0px ;
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to <br> <span id="sazi">SAZI</span> Beyond <br> Clan</h1>
+        <p>Together, Let's Reach Beyond Boundaries and Achieve the Extraordinary!</p>
+    </header>
+    <nav>
+        <button class="menu-toggle" onclick="toggleMenu()">Menu</button>
+        <div class="nav-links">
+            <a href="#Join">Join!!</a>
+            <a href="#about">About Us</a>
+            <a href="#rules">Rules & Regulations</a>
+            <a href="#contact">Contact</a>
+            <a href="#textus">Text Us</a>
+        </div>
+    </nav>
+    <main>
+        <section id="slTop" class="section">
+            <!-- <img src="img/slTop.jpg" alt=""> -->
+            <h2>Smash Legends</h2>
+        </section>
+        <section id="Join" class="section join">
+            <div>
+                <h2>Join Info: </h2>
+            <div>
+                <p>Clan Code:</p>
+                <span style="color: #3fb950;">
+                    <p id="clanTag">u00d98hxbfw3</p>
+                </span>
+                <button onclick="copyToClipboard()">Copy Clan Code</button>
+            </div>
+            <p id="copyFeedback" style="color: #3fb950; display: none;">Copied to clipboard!</p>
+            </div>
+            <div>
+                <img src="https://media.tenor.com/B-cQ3_K8AHgAAAAi/money-rain.gif" alt="">
+            </div>
+           </section>
+        <section id="about" class="section">
+            <h2>About SAZI Beyond</h2>
+            <p><span id="sazi">SAZI</span> Beyond is a clan dedicated to pushing the boundaries in Smash Legends.
+                Whether you're a seasoned player or just starting, our community fosters growth, teamwork, and fun.</p>
+
+            <p></p>
+        </section>
+        <section id="rules" class="section rules">
+            <div>
+                <h2>Rules & Regulations</h2>
+            <ol>
+                <li>You must be an active member.</li>
+                <li style="color: red;">Members will be removed if they aren't active for a week.</li>
+                <li>Respect all members and maintain a positive attitude.</li>
+                <li>No spamming, trolling, or toxic behavior in chat or games.</li>
+                <li>Participate in clan activities and events actively.</li>
+                <li>Follow game rules and avoid cheating or exploiting bugs.</li>
+                <li>Keep the clan environment friendly and inclusive.</li>
+            </ol>
+            </div>
+            <div>
+                <img src="img/danger.jpg" alt="">
+            </div>
+        </section>
+        <section id="contact" class="section info">
+            <div>
+                <h2>Contact Us</h2>
+            <div class="contact-info">
+                <p>Email us: <a href="mailto:sazedurrahman707@gmail.com">sazedurrahman707@gmail.com</a></p>
+                <p>Whatsapp: <span id="wp" style="color: #3fb950;">+8801317982777</span></p>
+                <button onclick="copyToClipboardwp()">Copy Whatsapp Number</button>
+                <p id="copyFeedbackwp" style="color: #3fb950; display: none;">Copied to clipboard!</p>
+                <h3>Owner:</h3>
+                <img style="width: 100px; border-radius: 100px;" src="img/snow.jpg" alt="">
+                <p>Name: Md. Sazedur Rahman</p>
+                <p>X (Twitter): <a href="https://twitter.com/sazi_zZz">@sazi_zZz</a></p>
+                <p>Smash Legends Nickname: <span style="color: #3fb950;">sazi</span></p>
+                <p>Smasher Code: <span id="sc" style="color: #3fb950;">Grdkybt22</span></p>
+                <button onclick="copyToClipboardsc()">Copy Smasher Code</button>
+                <p id="copyFeedbacksc" style="color: #3fb950; display: none;">Copied to clipboard!</p>
+            </div>
+            </div>
+            <div>
+                <img src="https://media.tenor.com/q27KhS9kKmwAAAAi/dazai-liar-dancer.gif" alt="">
+            </div>
+        </section>
+        <section id="textus" class="section contactForm">
+            <div>
+                <h2>Text Us</h2>
+            <form action="submit.php" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </div>
+            <div>
+                <img src="img/slgif.gif" alt="">
+            </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 <span id="sazi">SAZI</span> Beyond Clan. All rights reserved.</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
